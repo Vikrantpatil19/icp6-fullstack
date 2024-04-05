@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Book Aeroplane",
+        "description": "Book your next flight with us and enjoy a seamless travel experience.",
+        "buttonText": "Book Now",
+        "id":"1"
+        
+        
+    },
+    {
+        "title": "Book Train",
+        "description": "Travel comfortably by train to your destination. Book tickets hassle-free.",
+        "buttonText": "Book Now",
+        "id":"2"
+        
+        
+    }
+]
