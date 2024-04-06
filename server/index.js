@@ -28,13 +28,21 @@ app.get("/health", (req,res) =>{
     })
 });
 
-app.post("/payment" , (req , res) =>{
+app.post("/payment" , async(req , res) =>{
 
     const {First_Name , Last_Name , Date_of_Birth , Phone_Number , Email , City , Zip  } = req.body;
 
-    const ticket = new Ticket({
-        name,
-        phoneNumber,
+    const newPayment  = await Payment.create({
+
+        "First_Name": First_Name,
+        "Last_Name" : Last_Name,
+        "Date_of_Birth" : Date_of_Birth,
+        "Phone_Number" : Phone_Number,
+        "Email": Email,
+        "City": City,
+        "Zip": Zip
+
+       
     })
 })
 
