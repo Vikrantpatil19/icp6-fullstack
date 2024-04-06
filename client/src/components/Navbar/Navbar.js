@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg  navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg  navbar-dark bg-info">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">Booking</Link>
 
@@ -16,25 +16,24 @@ export default function Navbar() {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/booking">Bookings</Link>
-        </li>
+        
         <li className="nav-item dropdown">
           <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Booking
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/">Action</Link></li>
-            <li><Link className="dropdown-item" to="/">Another action</Link></li>
+            <li><Link className="dropdown-item" to="/booking/1">Aeroplane</Link></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/">Something else here</Link></li>
+            <li><Link className="dropdown-item" to="/booking/2">Train</Link></li>
           </ul>
         </li>
         
       </ul>
       <form className="d-flex" >
         
-        <button className="btn btn-outline-warning" type="submit">Login</button>
+      <Link to='/login' >
+      <button className="btn btn-info border text-white" type="submit">Login</button>
+      </Link>
         
       </form>
     </div>
