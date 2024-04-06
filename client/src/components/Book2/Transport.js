@@ -12,7 +12,7 @@ export default function Transport() {
                         {/* Displaying title */}
                         <h2>{block.title}</h2>
                         {/* Displaying description */}
-                        <p>{block.description}</p>
+                        <p className='text-body-secondary'>{block.description}</p>
                         {/* Link to booking page */}
                         <Link to={`/booking/${block.id}`} className="btn btn-info btn-lg px-4 me-md-2">
                             {/* Button text */}

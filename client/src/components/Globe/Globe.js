@@ -8,29 +8,24 @@ export default function Globe() {
 
             <div className="container mx-auto row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div className="feature col">
-                <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg className="bi" width="1em" height="1em"><use xlinkHref="#collection"></use></svg>
+                <div className="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+                <img src='https://dtora.wpengine.com/wp-content/uploads/2019/03/count2.png' alt='img' />
                 </div>
-                <h3 className="fs-2 text-body-emphasis">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" className="icon-link">
-                    Call to action
-                    <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
-                </a>
+                <h3 className="fs-2 text-body-emphasis">Go Green</h3>
+                <p className='text-body-secondary'>Our travel agency embraces eco-friendly practices by collaborating with sustainable accommodations and transportation providers, aiming to reduce environmental impact and promote responsible tourism.</p>
+                
+                
             </div>
             <div className="feature col">
-            <img className='rotate mx-auto' src='https://dtora.wpengine.com/wp-content/uploads/2019/03/world-img.png' />
+            <img className='rotate mx-auto' src='https://dtora.wpengine.com/wp-content/uploads/2019/03/world-img.png' alt='img' />
             </div>
             <div className="feature col">
-                <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg className="bi" width="1em" height="1em"><use xlinkHref="#toggles2"></use></svg>
+                <div className="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
+                    <img src='https://dtora.wpengine.com/wp-content/uploads/2019/03/count2.png' alt='img' />
                 </div>
-                <h3 className="fs-2 text-body-emphasis">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" className="icon-link">
-                    Call to action
-                    <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
-                </a>
+                <h3 className="fs-2 text-body-emphasis">Carbon Emmision</h3>
+                <p className='text-body-secondary'>To address the challenge of global warming, our agency advocates for low-carbon travel options and implements initiatives to minimize carbon emissions, contributing to the fight against climate change.</p>
+               
             </div>
         </div>
 
