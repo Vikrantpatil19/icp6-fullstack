@@ -6,11 +6,11 @@ import User from './user.png';
 import './ReviewCard.css';
 
 function ReviewCard({_id, name, message, loadReview}) {
-    // const deleteReview = async () => {
-    //     const response = await axios.delete(`${process.env.REACT_APP_API_URL}/review/${_id}`)
-    //     toast.success(response.data.message)
-    //     loadReview();
-    //   }
+    const deleteReview = async () => {
+        const response = await axios.delete(`${process.env.REACT_APP_API_URL}/review/${_id}`)
+        toast.success(response.data.message)
+        loadReview();
+      }
     return (
         <div className="card p-3 px-4 m-3 card-wth border-info shadow">
             <img src={Quote} className="icon-wth"/>
