@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './Review.css';
-// import axios from 'axios';
-// import toast from 'react-hot-toast';
-// import ReviewCard from './Component/ReviewCard';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import ReviewCard from './../../components/ReviewCard/ReviewCard';
 
 function App() {
 
@@ -11,9 +11,9 @@ function App() {
 
   const [reviews, setReviews] = useState([]);
   const loadReview = async () =>{
-    // const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
 
-    // setReviews(response.data.data);
+    setReviews(response.data.data);
   }
 
   useEffect(()=>{
@@ -21,14 +21,14 @@ function App() {
   }, []);
 
   const addReview = async() => {
-    // const response = await axios.post(`${process.env.REACT_APP_API_URL}/review`,
-    // {
-    //   name: name,
-    //   message: message
-    // })
-    // toast.success(response.data.message);
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/review`,
+    {
+      name: name,
+      message: message
+    })
+    toast.success(response.data.message);
     loadReview();
-    // reset();
+    reset();
   }
 
   const reset = () => {
@@ -44,19 +44,19 @@ function App() {
             <p className="mb-2">Name : </p>
                 <input type='text'
                 placeholder='Enter Name'
-                // value={name}
-                // onChange={(e)=>{
-                //     setName(e.target.value)
-                // }} 
+                value={name}
+                onChange={(e)=>{
+                    setName(e.target.value)
+                }} 
                 className='mb-3 p-2 px-3 rounded border border-black'/>
 
             <p className="mb-2">Review : </p>
             <input type='text'
               placeholder='Enter Message'
-              // value={message}
-              // onChange={(e)=>{
-              //   setMessage(e.target.value)
-              // }} 
+              value={message}
+              onChange={(e)=>{
+                setMessage(e.target.value)
+              }} 
               className='mb-3 p-2 px-3 rounded border border-black'/>
 
             <div className="mb-3">
@@ -70,12 +70,12 @@ function App() {
         <div className="body p-5">
             <h1 className="text-center pt-4">Read what our Customers says</h1><hr />
             <div className="container">
-            <div className="row d-flew">
+            <div className="d-flex flex-wrap">
             {
-                // reviews.map((review) => {
-                //     const {_id, name, message} = review;
-                //     return( <ReviewCard key={_id} _id={_id} name={name} message={message} loadReview={loadReview} /> )
-                // })
+                reviews.map((review) => {
+                    const {_id, name, message} = review;
+                    return( <ReviewCard key={_id} _id={_id} name={name} message={message} loadReview={loadReview} /> )
+                })
             }
             </div>
             </div>
