@@ -17,7 +17,16 @@ const TimeSlot = () => {
       arrivalTime="08:30"
       arrivalDate="Sat, 6 Apr"
       />
-      
+      <TrainDetails
+      trainName="1450 KOLHAPUR EXPRESS"
+      runsOn="S M T W T F S Mail/Express (12779 Running Status)"
+      departureStation="PUNE"
+      departureTime="05:00"
+      departureDate="Wed, 10 Apr"
+      arrivalStation="KOLHAPUR"
+      arrivalTime="09:00"
+      arrivalDate="Wed, 10 Apr"
+      />
     </div>
   );
 };
