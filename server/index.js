@@ -4,7 +4,7 @@ import mongoose, { connect } from 'mongoose';
 import dotenv  from 'dotenv';
 dotenv.config();
 
-import Payment from './models/paymentpage_model.js';
+import Payment from './models/paymentpage_model.js'
 
 const app = express();
 app.use(cors());
@@ -44,9 +44,15 @@ app.post("/payment" , async(req , res) =>{
 
        
     })
-})
+
+    res.json({
+        success: true,
+        message: "data added successfully",
+        data: newPayment
+    })
+});
 
 
 app.listen(PORT, () => {
-w    console.log(`Server is running on port ${PORT}`)
+  console.log(`Server is running on port ${PORT}`)
 })
