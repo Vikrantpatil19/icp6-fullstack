@@ -10,6 +10,7 @@ import Carousel from '../../components/Carousel/Carousel.js'
 import Globe from '../../components/Globe/Globe.js'
 import HeroTrain from '../../components/HeroTrain/HeroTrain.js'
 import HeroAero from '../../components/HeroAero/HeroAero.js'
+import Preloader from '../../components/Preloader/Preloader.js'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Navbar/>
       <Carousel/>
       <Transport/>
+      <Preloader/>
       <HeroTrain/>
       <HeroAero/>
       <Features/>

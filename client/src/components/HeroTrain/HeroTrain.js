@@ -1,16 +1,18 @@
 import React from 'react';
 import './HeroSec.css';
-import Img1 from "./img2.png";
+// import Img1 from "./img2.png";
+
 import bookingData from '../../configs/Booking/Transport.json';
 import { Link } from 'react-router-dom';
 
 export default function HeroTrain() {
     return (
-        <div className='border-top '>
+        <div className='border-top bg-white  '>
             <div className="container col-xxl-8 px-4 py-5 ">
                 <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-                    <div className="col-10 col-sm-8 col-lg-6 heroimg">
-                        <img src={Img1} className="d-block mx-lg-auto img-fluid heroimg" alt="Bootstrap Themes"   loading="lazy"/>
+                    <div className="col-10 col-sm-8 col-lg-6 ">
+                        {/* <img src={Img1} className="d-block mx-lg-auto img-fluid heroimg" alt="Bootstrap Themes"   loading="lazy"/> */}
+                        <img src="http://html.0effortthemes.com/go/images/train-LGT.gif" className="d-block mx-lg-auto img-fluid " alt="Bootstrap Themes"   loading="lazy"/>
                     </div>
                     <div className="col-lg-6">
                         <h1 className="fs-1 fw-bold text-info-emphasis lh-1 mb-3">DISCOVER THE WORLD WITH TRAIN</h1>
