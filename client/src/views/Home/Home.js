@@ -1,9 +1,20 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
+import Features from '../../components/Features/Features'
+import AdvertiseVdo from '../../components/AdvertiseVdo/AdvertiseVdo.js'
+import Footer from '../../components/Footer/Footer.js'
+// import Book2 from '../../components/Transport/Transport.js'
+import Transport from '../../components/Book2/Transport.js'
 
 function Home() {
   return (
     <div>
-      Home page
+      <Navbar/>
+      <Transport/>
+      <Features/>
+
+      <AdvertiseVdo/>
+      <Footer/>
     </div>
   )
 }

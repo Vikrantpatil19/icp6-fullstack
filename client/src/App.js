@@ -35,7 +35,7 @@ function App() {
     },
 
     {
-      path: "/booking",
+      path: "/booking/:id",
       element: <Booking/>
     },
 

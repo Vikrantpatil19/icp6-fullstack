@@ -48,5 +48,5 @@ app.post("/payment" , async(req , res) =>{
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
+w    console.log(`Server is running on port ${PORT}`)
 })
