@@ -40,7 +40,9 @@ app.post("/payment" , async(req , res) =>{
         "Phone_Number" : Phone_Number,
         "Email": Email,
         "City": City,
+        
         "Zip": Zip
+
 
        
     })
