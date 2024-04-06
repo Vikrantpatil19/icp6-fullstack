@@ -1,16 +1,20 @@
 [
     {
         "title": "Book Aeroplane",
+        "name":  "Plane",
         "description": "Book your next flight with us and enjoy a seamless travel experience.",
-        "buttonText": "Book Now",
+        "buttonText": "Book Plane",
+        "img": "https://webredox.net/demo/wp/travol/wp-content/uploads/2022/08/canada1-1.jpg",
         "id":"1"
         
         
     },
     {
         "title": "Book Train",
+        "name": "Train",
         "description": "Travel comfortably by train to your destination. Book tickets hassle-free.",
-        "buttonText": "Book Now",
+        "buttonText": "Book Train",
+        "img": "https://webredox.net/demo/wp/travol/wp-content/uploads/2022/08/maldives1-1.jpg",
         "id":"2"
         
         

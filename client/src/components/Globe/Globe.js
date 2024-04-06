@@ -11,7 +11,7 @@ export default function Globe() {
                 <div className="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
                 <img src='https://dtora.wpengine.com/wp-content/uploads/2019/03/count2.png' alt='img' />
                 </div>
-                <h3 className="fs-2 text-body-emphasis">Go Green</h3>
+                <h3 className="fs-2 text-info-emphasis ">Go Green</h3>
                 <p className='text-body-secondary'>Our travel agency embraces eco-friendly practices by collaborating with sustainable accommodations and transportation providers, aiming to reduce environmental impact and promote responsible tourism.</p>
                 
                 
@@ -23,7 +23,7 @@ export default function Globe() {
                 <div className="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-3">
                     <img src='https://dtora.wpengine.com/wp-content/uploads/2019/03/count2.png' alt='img' />
                 </div>
-                <h3 className="fs-2 text-body-emphasis">Carbon Emmision</h3>
+                <h3 className="fs-2 text-info-emphasis ">Carbon Emmision</h3>
                 <p className='text-body-secondary'>To address the challenge of global warming, our agency advocates for low-carbon travel options and implements initiatives to minimize carbon emissions, contributing to the fight against climate change.</p>
                
             </div>
