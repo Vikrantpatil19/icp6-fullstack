@@ -1,8 +1,8 @@
-import React from 'react'
-import axios from 'axios';
-import toast from 'react-hot-toast';
-import Quote from './quote.png';
-import User from './user.png';
+// import React from 'react'
+// import axios from 'axios';
+// import toast from 'react-hot-toast';
+// import Quote from './quote.png';
+// import User from './user.png';
 import './ReviewCard.css';
 
 function ReviewCard({_id, name, message, loadReview}) {
