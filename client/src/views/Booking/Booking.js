@@ -14,12 +14,15 @@ export default function Booking() {
 
     return (
         <div className="container col-xxl-12 px-4 py-5 d-flex mx-auto">
-            <div className="mx-auto">
+            <div className="mx-auto d-flex">
                 <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
                     <h2>{booking.title}</h2>
                     <p>{booking.description}</p>
                     <p>Booking ID: {booking.id}</p>
                 </div>
+                <div>
+                        <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border"/>
+                    </div>
             </div>
         </div>
     );

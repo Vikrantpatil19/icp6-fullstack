@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Footer.css';
+
 
 export default function Footer() {
     return (
-        <>
+        <div className='w-100 bg-img-footer pb-4'>
             <div className="container">
                 <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 pb-3 my-5 border-top mb-0">
                     <div className="col ">
@@ -22,8 +24,8 @@ export default function Footer() {
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">FaceBook(Meta)</Link></li>
                             <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Instagram</Link></li>
-                            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Twitter(X)</Link></li>
-                          
+                            <li className="nav-item pb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Twitter(X)</Link></li>
+
                         </ul>
                     </div>
 
@@ -32,38 +34,38 @@ export default function Footer() {
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Business Cass</Link></li>
                             <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Economy</Link></li>
-                            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Sleeper</Link></li>
-                           
+                            <li className="nav-item pb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Sleeper</Link></li>
+
                         </ul>
                     </div>
 
-                    <div className="col mb-2">
+                    <div className="col pb-2">
                         <h5>Contact Us</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">booking@gmail.com</Link></li>
-                            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">+91 9766426214</Link></li>
-                            <li className="nav-item mb-2"><Link to="#" className="nav-link p-0 text-body-secondary">Pune </Link></li>
-                           
+                            <li className="nav-item mb-2"><a href="mailto:booking@gmail.com" className="nav-link p-0 text-body-secondary">booking@gmail.com</a></li>
+                            <li className="nav-item mb-2"><a href="tel:+919766426214" className="nav-link p-0 text-body-secondary">+91 9766426214</a></li>
+                            <li className="nav-item pb-2"><a href="#" className="nav-link p-0 text-body-secondary">Pune</a></li>
                         </ul>
+
                     </div>
 
-                    
+
                 </footer>
 
-                <div class=" offset-md-1 mb-5 mx-auto">
-                    <form className='w-100 gap-2 flex-sm-row w-100 gap-2'>
+                <div class=" offset-md-1  mx-auto">
+                    <form className='w-75 gap-2 flex-sm-row mx-auto gap-2'>
                         <div className='d-flex flex-column flex-sm-row  gap-2'>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
                         </div>
                         <div class="d-flex flex-column flex-sm-row  gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                            <button class="btn btn-primary" type="button" fdprocessedid="6bvxu">Subscribe</button>
+                            <button class="btn btn-info" type="button" fdprocessedid="6bvxu">Subscribe</button>
                         </div>
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
