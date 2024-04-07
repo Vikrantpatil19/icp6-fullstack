@@ -44,7 +44,7 @@ export default function Footer() {
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><a href="mailto:booking@gmail.com" className="nav-link p-0 text-body-secondary">booking@gmail.com</a></li>
                             <li className="nav-item mb-2"><a href="tel:+919766426214" className="nav-link p-0 text-body-secondary">+91 9766426214</a></li>
-                            <li className="nav-item pb-2"><a href="#" className="nav-link p-0 text-body-secondary">Pune</a></li>
+                            <li className="nav-item pb-2"><a href="/" className="nav-link p-0 text-body-secondary">Pune</a></li>
                         </ul>
 
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './HeroSec.css';
 // import Img1 from "./img2.png";
 
-import bookingData from '../../configs/Booking/Transport.json';
+// import bookingData from '../../configs/Booking/Transport.json';
 import { Link } from 'react-router-dom';
 
 export default function HeroTrain() {
