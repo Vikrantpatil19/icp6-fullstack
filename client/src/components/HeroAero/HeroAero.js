@@ -1,6 +1,6 @@
 import React from 'react';
 // import Img1 from './img3.png';
-import bookingData from '../../configs/Booking/Transport.json';
+// import bookingData from '../../configs/Booking/Transport.json';
 import { Link } from 'react-router-dom';
 // import vdo1 from './vdo1.gif';
 import './HeroAero.css'
@@ -12,10 +12,10 @@ export default function HeroAero() {
             <div className='border-top bg-white'>
                 <div className="container col-xxl-8 px-4 py-5 ">
                     <div className="row flex-lg-row align-items-center g-5 py-5">
-                        <div className="col-10 col-sm-8 col-lg-6 " style={{ position: 'relative' }}>
-                            <img src="http://html.0effortthemes.com/go/images/banner-animation/cloud.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" style={{ height: "350px", position: 'absolute', top: -170, left: -100, zIndex: 0 }} />
+                        <div className="col-10 col-sm-8 col-lg-6 " style={{ position: 'relative', height:"350px"}}>
+                            <img src="http://html.0effortthemes.com/go/images/banner-animation/cloud.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" style={{ height: "350px", position: 'absolute', top: 0, left: 0, zIndex: 0 }} />
                             {/* <img src={Img1} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }} /> */}
-                            <img src="http://html.0effortthemes.com/go/images/banner-animation/flight.png" className="d-block mx-lg-auto img-fluid img-float" alt="Bootstrap Themes" loading="lazy" style={{ height: "105px",position: 'absolute', top: -50, left: 0, zIndex: 2 }} />
+                            <img src="http://html.0effortthemes.com/go/images/banner-animation/flight.png" className="d-block mx-lg-auto img-fluid img-float" alt="Bootstrap Themes" loading="lazy" style={{ height: "105px",position: 'absolute', top: 120, left: 100, zIndex: 2 }} />
                         </div>
                         <div className="col-lg-6">
                             <h1 className="fs-1 fw-bold text-info-emphasis lh-1 mb-3">DISCOVER THE WORLD WITH Flight</h1>
