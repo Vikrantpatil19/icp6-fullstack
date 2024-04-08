@@ -226,6 +226,10 @@ app.post("/payment", async (req, res) => {
   }
 });
 
+app.post("/booking", async(req, res) => {
+  const {name, phone, gender, seat} = Booking.create()
+})
+
 
 
 
