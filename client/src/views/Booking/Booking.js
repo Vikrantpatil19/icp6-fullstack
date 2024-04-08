@@ -1,8 +1,13 @@
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Booking.css';
+import Destination from '../Destination/Destination.js'
+import Navbar from '../../components/Navbar/Navbar.js';
+import Footer from '../../components/Footer/Footer.js';
 
 function Booking() {
+
   const [payment, setPayment] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -27,8 +32,10 @@ function Booking() {
   };
 
   return (
+     
     <div className=''>
-      <div className='text-center bg-info p-3'>
+      <Navbar/>
+      <div className='text-center bg-info mt-5 p-3'>
         <h1 className='  fs-3'>PASSENGER DETAILS</h1>
         <span className=''> HDP TO AVG </span>
         <span>| WED, 10 APR 2024 </span>
@@ -65,7 +72,7 @@ function Booking() {
       <hr></hr>
 
       {!formSubmitted && (
-        <div className='p-3 select-passenger container mt-4'>
+        <div className='p-3 select-passenger container m-auto d-block  '>
           <h4 className="mb-3">Select Passenger</h4>
           <div className="row">
             <div className="col-md-6 mb-3">
@@ -108,20 +115,20 @@ function Booking() {
 
         )}
 
-        
+
 
         <div className='container mt-4'>
           <h4>Payment Mode</h4>
           <div className="form-check">
             <input className="form-check-input" type="radio" name="payment" id="credit" value="credit" onChange={() => setPayment('credit')} checked={payment === 'credit'} />
             <label className="form-check-label" htmlFor="credit">
-              Credit Card
+              PAy through Credit & Debit Cards/Net Banking/Wallet/Others
             </label>
           </div>
           <div className="form-check">
             <input className="form-check-input" type="radio" name="payment" id="upi" value="upi" onChange={() => setPayment('upi')} checked={payment === 'upi'} />
             <label className="form-check-label" htmlFor="upi">
-              UPI
+              Pay through BHIM/UPI
             </label>
           </div>
         </div>
@@ -132,31 +139,28 @@ function Booking() {
           <div className="mb-3">
             <p className="mb-0">Do you want to purchase travel insurance? It costs ₹0.75 per person.</p>
           </div>
-          <div className="form-check mb-4">
+          <div className="form-check">
             <input className="form-check-input" type="checkbox" id="insuranceCheckbox" onChange={(e) => {
             }} />
             <label className="form-check-label" htmlFor="insuranceCheckbox">
               Yes, I want to purchase travel insurance.
             </label>
           </div>
+
         </div>
+        
       </div>
 
-
+      <div className="flex text-end container ">
+            <Link to="/timeslot" className='btn border border-black m-3'>
+              Cancle
+            </Link>
+          <Link to="/payment"  className="btn btn-info" >
+            Submit
+          </Link>
+        </div>
 
       {/* anand add  onClick={handleFormSubmit} */}
-
-      <div className="flex">
-        <button type="button" className="btn btn-info" >
-          Submit
-        </button>
-
-        <button className='btn'>
-          Cancle
-        </button>
-      </div>
-
-
 
 
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -183,6 +187,7 @@ function Booking() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
