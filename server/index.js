@@ -193,6 +193,7 @@ app.post("/user/logout", async (req, res) => {
 // Payment Api
 
 import Payment from "./models/paymentpage_model.js";
+import Booking from "./models/Booking.js";
 
 app.post("/payment", async (req, res) => {
   const {
@@ -223,6 +224,45 @@ app.post("/payment", async (req, res) => {
   } catch (error) {
       console.error("Error creating payment:", error);
       res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+app.post("/booking", async(req, res) => {
+  const { name, phone, gender, seat } = req.body;
+
+  try {
+    const book = await Booking.create({ name, phone });
+    res.json({
+      success: true,
+      message: "Details added Successfully",
+      data: book
+    });
+  } catch (error) {
+    console.error('Error creating booking:', error);
+    res.status(500).json({
+      success: false,
+      message: "Error adding booking",
+      error: error.message
+    });
+  }
+});
+
+app.get("/booking", async(req, res) => {
+  try {
+    const book = await Booking.find();
+    res.json({
+      success: true,
+      message: "Details fetched successfully",
+      data: book
+    });
+  } catch (error) {
+    console.error('Error fetching bookings:', error);
+    res.status(500).json({
+      success: false,
+      message: "Error fetching bookings",
+      error: error.message
+    });
   }
 });
 
