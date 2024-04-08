@@ -34,12 +34,12 @@ app.get("/health", (req, res) => {
 import Review from "./models/Review.js";
 
 app.post("/review", async (req, res) => {
-  const { name, message } = req.body;
+  const { name, message, userPhoto } = req.body;
 
   if (!name) {
     return res.json({
       success: false,
-      message: "Name is required",
+      message: "Login is required",
       data: null,
     });
   }
@@ -55,6 +55,7 @@ app.post("/review", async (req, res) => {
   const newReview = await Review.create({
     name: name,
     message: message,
+    userPhoto: userPhoto
   });
 
   res.json({
@@ -63,6 +64,7 @@ app.post("/review", async (req, res) => {
     data: newReview,
   });
 });
+
 app.get("/review", async (req, res) => {
   const review = await Review.find();
 

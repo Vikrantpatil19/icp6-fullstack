@@ -11,6 +11,7 @@ import Globe from '../../components/Globe/Globe.js'
 import HeroTrain from '../../components/HeroTrain/HeroTrain.js'
 import HeroAero from '../../components/HeroAero/HeroAero.js'
 import Preloader from '../../components/Preloader/Preloader.js'
+import ReviewComp from '../../components/ReviewComp/ReviewComp.js'
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
       <Features/>
       <Globe/>
       <AdvertiseVdo/>
+      <ReviewComp/>
       <Statistics/>
       <Footer/>
     </div>
