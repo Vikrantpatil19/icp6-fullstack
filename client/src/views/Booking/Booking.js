@@ -5,11 +5,11 @@ import './Booking.css';
 function Booking() {
   const [payment, setPayment] = useState('');
   const [name, setName] = useState('');
-  const [tel, setTel] = useState('');
-  const [gender, setGender] = useState('');
-  const [birth, setBirth] = useState('');
   const [phone, setPhone] = useState('');
-  const [seat, setSeat] = useState('');
+
+  const email = localStorage.getItem("email");
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,12 +17,10 @@ function Booking() {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/booking`, {
         name,
-        // gender,
         phone
-        // birth,
-        // seat
       });
       console.log(response.data);
+      alert('New passenger added!');
     } catch (error) {
       console.error('Error submitting form:', error);
     }
@@ -76,10 +74,12 @@ function Booking() {
       <hr></hr>
 
       <div>
+        <h4> Pasangr Name</h4>
+        <b><h4>{name}</h4></b>
         <h4>Passenger Mobile Number</h4>
-        <b>+91-</b><span>9876543210</span>
+        <b>+91-</b><span>{phone}</span>
         <hr></hr>
-        <p>Your ticket will be sent to email and {tel} </p>
+        <p>Your ticket will be sent to <a href={`mailto:${email}`}><span className='text-decoration-underline text-info '>{email}</span></a>  and {phone} </p>
       </div>
 
       <hr></hr>
@@ -110,32 +110,18 @@ function Booking() {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <input type="text" className='w-100 p-2' placeholder="Full Name" onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="mb-3">
-                  <input type="tel" className='w-100 p-2' placeholder="Mobile No." onChange={(e) => setTel(e.target.value)} />
+                  <input type="tel" className='w-100 p-2' placeholder="Mobile No." onChange={(e) => setPhone(e.target.value)} />
                 </div>
-                {/* <div className="mb-3">
-                  <p>Selected Gender: {gender}</p>
-                  <input type="radio" name="gender" value="Male" onChange={(e) => setGender(e.target.value)} checked={gender === "Male"} />Male
-                  <br />
-                  <input type="radio" name="gender" value="Female" onChange={(e) => setGender(e.target.value)} checked={gender === "Female"} />Female
-                </div>
-                <div>
-                  <p>Selected Birth : {birth}</p>
-                  <select value={birth} onChange={(e) => setBirth(e.target.value)}>
-                    <option value="LB">Lower Birth</option>
-                    <option value="MB">Middle Birth</option>
-                    <option value="UB">Upper Birth</option>
-                  </select>
-                </div> */}
               </form>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+              <button type="submit" onClick={handleSubmit} data-bs-dismiss="modal" className="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>
