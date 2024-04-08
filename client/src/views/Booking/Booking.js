@@ -1,11 +1,14 @@
-
-import React, {useState} from 'react' 
+import React, { useState } from 'react'
 import './Booking.css'
 
 function Booking() {
 
 
   const [payment, setPayment] = useState('');
+  const [name, setName] = useState('');
+  const [tel, setTel] = useState('');
+  const [gender, setGender] = useState('');
+  const [birth, setBirth] = useState('');
 
   return (
     <div className=''>
@@ -60,9 +63,7 @@ function Booking() {
         <h4>
           Select Passenger
         </h4>
-        <p className='text-info '>
-          + Add New
-        </p>
+        <p className="text-info" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+ Add New</p>
 
         <p className='text-info' >
           + Add Existing
@@ -73,11 +74,13 @@ function Booking() {
 
       <hr></hr>
 
+      
+
       <div>
         <h4>Passenger Mobile Number</h4>
         <b>+91-</b><span>9876543210</span>
         <hr></hr>
-        <p>Your ticket will be sent to email and phone</p>
+        <p>Your ticket will be sent to email and {tel} </p>
       </div>
 
       <hr></hr>
@@ -87,16 +90,16 @@ function Booking() {
         Payment = {payment}
 
         <label htmlfor='credit'>
-          <input type='radio' name='payment' id='credit' onChange={(e)=>{
-            if(e.target.checked){
+          <input type='radio' name='payment' id='credit' onChange={(e) => {
+            if (e.target.checked) {
               setPayment('credit')
             }
           }} />Credit
         </label>
-          <br/>
+        <br />
         <label htmlfor='upi'>
-          <input type='radio' name='payment' id='upi' onChange={(e)=>{
-            if(e.target.checked){
+          <input type='radio' name='payment' id='upi' onChange={(e) => {
+            if (e.target.checked) {
               setPayment('upi')
             }
           }} />UPI
@@ -110,6 +113,82 @@ function Booking() {
 
 
       </div>
+
+      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Add Passenger</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <form>
+                <div className="mb-3">
+                  <input type="text"
+                  className='w-100 p-2'
+                    placeholder="Full Name"
+                    onChange={(e) => {
+                      setName(e.target.value)
+                    }}/>
+                </div>
+                <div className="mb-3">
+                  <input type="tle"
+                  className='w-100 p-2'
+                    placeholder="Mobile No."
+                    onChange={(e) => {
+                      setTel(e.target.value)
+                    }}/>
+                </div>
+                <div className="mb-3">
+
+                  <p>Selected Gender: {gender}</p>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setGender(e.target.value)
+                      }
+                    }}
+                    checked={gender === "Male"}
+                  />Male
+
+                  <br />
+
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setGender(e.target.value)
+                      }
+                    }}
+                    checked={gender === "Female"}
+                  />Femalee
+
+                </div>
+                <div>
+                  <p>Selected Birth : {birth}</p>
+                  <select value={birth}
+                    onChange={(e) => {
+                      setBirth(e.target.value)
+                    }}>
+                    <option value="LB">Lower Birth</option>
+                    <option value="MB">Middle Birth</option>
+                    <option value="UB">Upper Birth</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -117,31 +196,3 @@ function Booking() {
 export default Booking
 
 
-// import React from 'react';
-// import { useParams } from 'react-router-dom';
-// import bookingData from '../../configs/Booking/Transport.json';
-
-
-// export default function Booking() {
-//     const { id } = useParams();
-//     const booking = bookingData.find(item => item.id === id);
-
-//     if (!booking) {
-//         return <div>Booking not found</div>;
-//     }
-
-//     return (
-//         <div className="container col-xxl-12 px-4 py-5 d-flex mx-auto">
-//             <div className="mx-auto d-flex">
-//                 <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
-//                     <h2>{booking.title}</h2>
-//                     <p>{booking.description}</p>
-//                     <p>Booking ID: {booking.id}</p>
-//                 </div>
-//                 <div>
-//                         <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border"/>
-//                     </div>
-//             </div>
-//         </div>
-//     );
-// }
