@@ -26,5 +26,13 @@ const PaymentPage = () => {
       [name]: value
     });
   };
+
+  const handleUpiChange = (e) => {
+    const { name, value } = e.target;
+    setUpiDetails({
+      ...upiDetails,
+      [name]: value
+    });
+  };
 }
 
