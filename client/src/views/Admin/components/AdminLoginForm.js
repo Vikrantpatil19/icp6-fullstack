@@ -1,25 +1,48 @@
-import React, { useState } from 'react';
-import toast from "react-hot-toast"
+import React, { useState, useEffect } from 'react';
+import toast from 'react-hot-toast';
+import axios from 'axios';
 
 export default function AdminLogin({ onLogin }) {
+    const [adminEmail, setAdminEmail] = useState('');
+    const [adminPassword, setAdminPassword] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
+    useEffect(() => {
+        const loadAdmin = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/admin`);
+                const data = response.data.data;
+                if (data && data.email && data.password) {
+                    setAdminEmail(data.email);
+                    setAdminPassword(data.password);
+                } else {
+                    setError('Admin credentials not found');
+                }
+            } catch (error) {
+                console.error('Error loading admin details:', error);
+                setError('Failed to load admin details');
+            }
+        };
+
+        loadAdmin();
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
-        const adminEmail = 'om@gmail.com';
-        const adminPassword = '123';
+        if (email === '' || password === '') {
+            setError('Email or password cannot be empty');
+            return;
+        }
 
         if (email === adminEmail && password === adminPassword) {
-            toast.success("Welocm Admin");
+            toast.success('Welcome Admin');
             onLogin();
         } else {
-
             setError('You are not authorized to access this page.');
-            toast.error("Admin Login Fail");
+            toast.error('Admin Login Fail');
         }
     };
 
@@ -29,7 +52,7 @@ export default function AdminLogin({ onLogin }) {
                 <div className="col-md-6">
                     <div className="card mt-4">
                         <div className="card-body">
-                            <h2 className="card-title mb-4 ">Admin Login</h2>
+                            <h2 className="card-title mb-4">Admin Login</h2>
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">Email:</label>
@@ -53,7 +76,7 @@ export default function AdminLogin({ onLogin }) {
                                         required
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-primary">Login</button>
+                                <button type="submit" className="btn btn-outline-info">Login</button>
                             </form>
                             {error && <p className="mt-3 text-danger">{error}</p>}
                         </div>
@@ -61,6 +84,5 @@ export default function AdminLogin({ onLogin }) {
                 </div>
             </div>
         </div>
-
     );
 }

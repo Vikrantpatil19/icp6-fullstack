@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AdminLogin from './components/AdminLogin';
+import AdminLogin from './components/AdminLoginForm';
 import Admin from './Admin';
 
 export default function AloginPage() {
