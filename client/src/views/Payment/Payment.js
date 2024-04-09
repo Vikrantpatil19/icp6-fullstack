@@ -13,5 +13,10 @@ const PaymentPage = () => {
   const [upiDetails , setUpiDetails] = useState({
     upiId: ''
   });
+
+  const [netBankingDetails , setNetBankingDetails] = useState ({
+    bankName: '',
+    accountNumber: ''
+  });
 }
 
