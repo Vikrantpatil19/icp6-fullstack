@@ -300,7 +300,33 @@ app.get("/contact", async (req, res) => {
   });
 
 });
+//Train Booking post API
+import BookTrain from './models/Booktrain.js'; 
 
+// POST endpoint for booking train tickets
+app.post("/book-train-ticket", async (req, res) => {
+  const { from, to, date } = req.body;
+
+  if (!from || !to || !date) {
+    return res.json({
+      success: false,
+      message: "From, to, and date are required",
+      data: null,
+    });
+  }
+
+  const newBooking = await BookTrain.create({
+    from: from,
+    to: to,
+    date: date,
+  });
+
+  res.json({
+    success: true,
+    message: "Train ticket booked successfully",
+    data: newBooking,
+  });
+})
 
 
 
