@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
+import toast from "react-hot-toast";
 import './contact.css'
 import om from '../Contact/om.jpg'
 import chetna from '../Contact/chetna.jpg'
@@ -16,6 +18,21 @@ import Footer from "../../components/Footer/Footer";
 
 
 export default function ContactUs() {
+
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`,{
+            name, phone, email, message
+        });
+
+        toast.success(response.data.message);
+    };
 
 
     return (
@@ -38,17 +55,17 @@ export default function ContactUs() {
                                 <div>
                                     <form>
 
-                                        <input type='text' placeholder='Enter your name' className='input-1 rounded'></input>
+                                        <input type='text' placeholder='Enter your name' className='input-1 rounded' onChange={(e) => setName(e.target.value)}></input>
 
 
-                                        <input type='text' placeholder='Enter your email' className='input-2 rounded'></input>
+                                        <input type='text' placeholder='Enter your email' className='input-2 rounded' onChange={(e) => setEmail(e.target.value)}></input>
 
 
-                                        <input type='text' placeholder='Enter your contact no' className='input-3 rounded'></input>
+                                        <input type='text' placeholder='Enter your contact no' className='input-3 rounded' onChange={(e) => setPhone(e.target.value)}></input>
 
 
-                                        <input type='text' placeholder='Enter your message' className='input-4 rounded'></input><br></br>
-                                        <button type="button" class="btn btn-outline-info btn-md mt-3">Summit</button>
+                                        <input type='text' placeholder='Enter your message' className='input-4 rounded' onChange={(e) => setMessage(e.target.value)} ></input><br></br>
+                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Summit</button>
                                     </form>
                                 </div>
                             </div>

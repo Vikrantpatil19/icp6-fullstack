@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast'
 import './Booking.css';
 import Destination from '../Destination/Destination.js'
 import Navbar from '../../components/Navbar/Navbar.js';
@@ -21,10 +22,12 @@ function Booking() {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/booking`, {
         name,
-        phone
+        phone,
+        email
       });
-      console.log(response.data);
-      alert('New passenger added!');
+      // console.log(response.data);
+      // alert('New passenger added!');
+      toast.success(response.data.message);
       setFormSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -181,8 +184,8 @@ function Booking() {
               </form>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" onClick={handleSubmit} data-bs-dismiss="modal" className="btn btn-primary">Submit</button>
+              <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" onClick={handleSubmit} data-bs-dismiss="modal" className="btn btn-outline-info">Submit</button>
             </div>
           </div>
         </div>

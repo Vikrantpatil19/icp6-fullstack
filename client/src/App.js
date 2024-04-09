@@ -61,7 +61,7 @@ function App() {
     },
 
     {
-      path: "/admin",
+      path: "/badmin",
       element: <Admin/>
     }
 
