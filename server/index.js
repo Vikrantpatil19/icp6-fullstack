@@ -355,6 +355,46 @@ app.post("/book-plane-ticket", async (req, res) => {
   });
 })
 
+// Admin Api
+
+import Admin from "./models/Admin.js";
+
+app.post("/admin", async (req, res) => {
+  const { email, password } = req.body;
+
+  const admin = await Admin.create({ email, password });
+
+  res.json({
+    success: true,
+    message: "Your Message has been sent to the admin",
+    data: admin
+  })
+
+});
+
+app.get("/admin", async (req, res) => {
+  try {
+    const admin = await Admin.findOne(); // Retrieve the first admin from the database
+    if (admin) {
+      res.json({
+        success: true,
+        message: "Admin details fetched successfully",
+        data: admin
+      });
+    } else {
+      res.status(404).json({
+        success: false,
+        message: "Admin details not found"
+      });
+    }
+  } catch (error) {
+    console.error('Error fetching admin details:', error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch admin details"
+    });
+  }
+});
 
 
 
