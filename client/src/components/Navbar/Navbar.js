@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'; // Import axios for making HTTP requests
+import axios from 'axios'; 
 import { auth } from "../../views/Login/config";
+import toast from 'react-hot-toast';
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
@@ -21,6 +22,8 @@ export default function Navbar() {
       
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/logout`,
       { email: user.email });
+
+      toast.success(response.data.message)
 
 
       localStorage.clear();

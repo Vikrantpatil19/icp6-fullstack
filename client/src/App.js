@@ -9,6 +9,7 @@ import TimeSlot from "./views/TimeSlot/TimeSlot";
 import Dashboard from "./views/Dashboard/Dashboard";
 import Contact from "./views/Contact/Contact";
 import Payment from "./views/Payment/Payment";
+import Admin from "./views/Admin/Admin";
 
 function App() {
 
@@ -58,6 +59,11 @@ function App() {
       path: "/dashboard",
       element: <Dashboard/>
     },
+
+    {
+      path: "/admin",
+      element: <Admin/>
+    }
 
 
   ])

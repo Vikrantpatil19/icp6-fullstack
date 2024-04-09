@@ -59,7 +59,9 @@ function Dashboard() {
         <div className='empty mt-3'>
 
         </div>
-        <img src={profile} className='profile rounded-circle ' />
+   <div className='d-flex justify-content-center '>
+   <img src={profile} className='profile rounded-circle ' />
+   </div>
         <p className='username'>Hii !! {name}..</p>
         <p className='user-detail' >
           <table>

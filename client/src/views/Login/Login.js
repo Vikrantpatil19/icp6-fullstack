@@ -5,6 +5,7 @@ import img2 from './img2.png';
 import { auth, provider } from "./config";
 import { signInWithPopup } from 'firebase/auth';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 function Login() {
   const [value, setValue] = useState('');
@@ -28,6 +29,8 @@ function Login() {
         userName: data.user.displayName,
         userPhoto: data.user.photoURL
       });
+
+      toast.success(response.data.message);
   
       console.log('User Data Recorded:', response.data);
     });

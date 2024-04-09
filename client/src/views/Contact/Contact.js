@@ -33,23 +33,22 @@ export default function ContactUs() {
 
                             <div class="col-5 text-start">
                                 <p className="heading"> Reach out to us!</p>
-                                <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed at nisl euismod urna bibendum</p>
+                                <p className="description">Ready to hear from You💌</p>
 
                                 <div>
                                     <form>
 
-                                        <input type='text' placeholder='enter your name' className='input-1'></input>
+                                        <input type='text' placeholder='Enter your name' className='input-1 rounded'></input>
 
 
-                                        <input type='text' placeholder='enter your email' className='input-2'></input>
+                                        <input type='text' placeholder='Enter your email' className='input-2 rounded'></input>
 
 
-                                        <input type='text' placeholder='enter your contact no' className='input-3'></input>
+                                        <input type='text' placeholder='Enter your contact no' className='input-3 rounded'></input>
 
 
-                                        <input type='text' placeholder='enter your message' className='input-4'></input><br></br>
-                                        <button type="button" class="btn btn-outline-info btn-md">Summit</button>
+                                        <input type='text' placeholder='Enter your message' className='input-4 rounded'></input><br></br>
+                                        <button type="button" class="btn btn-outline-info btn-md mt-3">Summit</button>
                                     </form>
                                 </div>
                             </div>
@@ -60,8 +59,7 @@ export default function ContactUs() {
                             <div class="col-5 text-start">
 
                                 <p className='heading-1' >Customer Care</p>
-                                <p className="description-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed at nisl euismod urna bibendum</p>
+                                <p className="description-1">Our team of customer care ninjas is ready to hear from you.</p>
 
 
                                 <div className='wrapper'>
@@ -71,7 +69,7 @@ export default function ContactUs() {
                                         </img>
                                         <h6>Om nandurkar</h6>
                                         <p >Customer Care<br></br>
-                                            +91 **********90
+                                            +91 **********14
                                         </p>
                                     </div>
 

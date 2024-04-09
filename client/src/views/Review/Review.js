@@ -4,6 +4,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import ReviewCard from './../../components/ReviewCard/ReviewCard';
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer';
 
 function App() {
   const userName = localStorage.getItem("userName");
@@ -75,7 +76,10 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
+
+    
   );
 }
 

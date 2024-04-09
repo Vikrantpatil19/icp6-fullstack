@@ -24,7 +24,7 @@ export default function ReviewComp() {
 
     return (
         <div className="p-5">
-            <h1 className="text-center">Read what our Customers say</h1>
+            <h1 className="text-center text-info-emphasis">Read what our Customers say</h1>
             <hr />
             <div className="container mx-auto" style={{ maxHeight: '200px', overflowY: 'auto' }}>
                 <div className="d-flex flex-wrap justify-content-center ">
