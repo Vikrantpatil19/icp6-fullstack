@@ -10,6 +10,8 @@ import Dashboard from "./views/Dashboard/Dashboard";
 import Contact from "./views/Contact/Contact";
 import Payment from "./views/Payment/Payment";
 import Admin from "./views/Admin/Admin";
+import AloginPage from "./views/Admin/AloginPage";
+// import AdminLogin from "./views/Admin/AdminLogin"
 
 function App() {
 
@@ -60,10 +62,21 @@ function App() {
       element: <Dashboard/>
     },
 
+    // {
+    //   path: "/badmin",
+    //   element: <Admin/>
+    // },
+
+    // {
+    //   path: "/admin",
+    //   element: <AdminLogin/>
+    // }
+
     {
       path: "/badmin",
-      element: <Admin/>
+      element : <AloginPage/>
     }
+
 
 
   ])
