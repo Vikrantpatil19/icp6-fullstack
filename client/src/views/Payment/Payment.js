@@ -34,5 +34,14 @@ const PaymentPage = () => {
       [name]: value
     });
   };
+
+  const handleNetBankingChange = (e) => {
+    const { name, value } = e.target;
+    setNetBankingDetails({
+      ...netBankingDetails,
+      [name]: value
+    });
+  };
+
 }
 
