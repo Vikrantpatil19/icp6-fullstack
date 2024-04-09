@@ -43,5 +43,11 @@ const PaymentPage = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle payment submission logic here
+    console.log('Payment submitted:', { paymentMethod, cardDetails, upiDetails, netBankingDetails });
+  };
+
 }
 
