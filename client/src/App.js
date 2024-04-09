@@ -12,7 +12,8 @@ import Payment from "./views/Payment/Payment";
 <<<<<<< HEAD
 =======
 import Admin from "./views/Admin/Admin";
->>>>>>> 857b75833836ebca55ecac60497d3610178bc078
+import AloginPage from "./views/Admin/AloginPage";
+// import AdminLogin from "./views/Admin/AdminLogin"
 
 function App() {
 
@@ -71,14 +72,22 @@ function App() {
       element: <Dashboard/>
     },
 
-<<<<<<< HEAD
-=======
+    // {
+    //   path: "/badmin",
+    //   element: <Admin/>
+    // },
+
+    // {
+    //   path: "/admin",
+    //   element: <AdminLogin/>
+    // }
+
     {
       path: "/badmin",
-      element: <Admin/>
+      element : <AloginPage/>
     }
 
->>>>>>> 857b75833836ebca55ecac60497d3610178bc078
+
 
   ])
 
