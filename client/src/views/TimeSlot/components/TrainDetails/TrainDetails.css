@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
     width: 90%;
     border: 1px solid black;
@@ -5,6 +6,15 @@
     padding: 20px;
     margin-top: 20px auto;
   }
+=======
+.container-1 {
+  width: 90%;
+  border: 1px solid black;
+  background-color: rgba(250, 22, 22, 0.274);
+  padding: 20px;
+  margin-top: 20px auto;
+}
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
   
   .train-name {
     font-size: 22px;

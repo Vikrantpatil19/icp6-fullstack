@@ -8,6 +8,10 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+<<<<<<< HEAD
+=======
+    "firebase": "^10.10.0",
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

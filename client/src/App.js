@@ -9,6 +9,10 @@ import TimeSlot from "./views/TimeSlot/TimeSlot";
 import Dashboard from "./views/Dashboard/Dashboard";
 import Contact from "./views/Contact/Contact";
 import Payment from "./views/Payment/Payment";
+<<<<<<< HEAD
+=======
+import Admin from "./views/Admin/Admin";
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
 
 function App() {
 
@@ -25,7 +29,11 @@ function App() {
     },
 
     {
+<<<<<<< HEAD
       path: "/destination",
+=======
+      path: "/destination/:id",
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
       element: <Destination/>
     },
 
@@ -35,7 +43,11 @@ function App() {
     },
 
     {
+<<<<<<< HEAD
       path: "/booking/:id",
+=======
+      path: "/booking",
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
       element: <Booking/>
     },
 
@@ -59,6 +71,14 @@ function App() {
       element: <Dashboard/>
     },
 
+<<<<<<< HEAD
+=======
+    {
+      path: "/badmin",
+      element: <Admin/>
+    }
+
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
 
   ])
 

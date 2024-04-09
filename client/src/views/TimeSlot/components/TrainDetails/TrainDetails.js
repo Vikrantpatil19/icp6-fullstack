@@ -5,7 +5,11 @@ import "./TrainDetails.css";
 const TrainDetails = (props) => {
     const { trainName, runsOn, departureStation, departureTime, departureDate, arrivalStation, arrivalTime, arrivalDate } = props;
   return (
+<<<<<<< HEAD
     <div className="container shadow p-3 mb-5 bg-body-tertiary rounded">
+=======
+    <div className=" container container-1 shadow p-3 mb-5 bg-body-tertiary rounded">
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
         <div className="train-info">
           <div className="train-name text-info">
             {trainName}

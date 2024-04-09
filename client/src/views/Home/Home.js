@@ -11,6 +11,10 @@ import Globe from '../../components/Globe/Globe.js'
 import HeroTrain from '../../components/HeroTrain/HeroTrain.js'
 import HeroAero from '../../components/HeroAero/HeroAero.js'
 import Preloader from '../../components/Preloader/Preloader.js'
+<<<<<<< HEAD
+=======
+import ReviewComp from '../../components/ReviewComp/ReviewComp.js'
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
 
 function Home() {
   return (
@@ -18,13 +22,22 @@ function Home() {
       <Navbar/>
       <Carousel/>
       <Transport/>
+<<<<<<< HEAD
       <Preloader/>
+=======
+      {/* <Preloader/> */}
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
       <HeroTrain/>
       <HeroAero/>
       <Features/>
       <Globe/>
+<<<<<<< HEAD
 
       <AdvertiseVdo/>
+=======
+      <AdvertiseVdo/>
+      <ReviewComp/>
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
       <Statistics/>
       <Footer/>
     </div>

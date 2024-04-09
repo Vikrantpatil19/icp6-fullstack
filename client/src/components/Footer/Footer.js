@@ -11,7 +11,11 @@ export default function Footer() {
                     <div className="col ">
                         <Link to="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                             <h4>Save on your plans!
+<<<<<<< HEAD
                                 Select XYZ And Receive
+=======
+                                Select BOOKING And Receive
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
                                 our discounts by e-mail.</h4>
                         </Link>
                         {/* <p className="text-body-secondary">&copy; 2024</p> */}
@@ -52,16 +56,27 @@ export default function Footer() {
 
                 </footer>
 
+<<<<<<< HEAD
                 <div class=" offset-md-1  mx-auto">
+=======
+                <div className=" offset-md-1  mx-auto">
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
                     <form className='w-75 gap-2 flex-sm-row mx-auto gap-2'>
                         <div className='d-flex flex-column flex-sm-row  gap-2'>
                             <h5>Subscribe to our newsletter</h5>
                             <p>Monthly digest of what's new and exciting from us.</p>
                         </div>
+<<<<<<< HEAD
                         <div class="d-flex flex-column flex-sm-row  gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
                             <button class="btn btn-info" type="button" fdprocessedid="6bvxu">Subscribe</button>
+=======
+                        <div className="d-flex flex-column flex-sm-row  gap-2">
+                            <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" className="form-control" placeholder="Email address" />
+                            <button className="btn btn-info" type="button" fdprocessedid="6bvxu">Subscribe</button>
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
                         </div>
                     </form>
                 </div>

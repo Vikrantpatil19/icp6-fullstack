@@ -15,7 +15,11 @@ export default function Transport() {
                         {/* Displaying description */}
                         <p className='text-body-secondary'>{block.description}</p>
                         {/* Link to booking page */}
+<<<<<<< HEAD
                         <Link to={`/booking/${block.id}`} className="btn btn-outline-info btn-lg px-4 me-md-2">
+=======
+                        <Link to={`/destination/${block.id}`} className="btn btn-outline-info btn-lg px-4 me-md-2">
+>>>>>>> 857b75833836ebca55ecac60497d3610178bc078
                             {/* Button text */}
                             {block.buttonText}
                         </Link>
