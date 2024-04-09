@@ -18,5 +18,13 @@ const PaymentPage = () => {
     bankName: '',
     accountNumber: ''
   });
+
+  const handleCardChange = (e) => {
+    const { name, value } = e.target;
+    setCardDetails({
+      ...cardDetails,
+      [name]: value
+    });
+  };
 }
 
