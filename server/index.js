@@ -301,7 +301,7 @@ app.get("/contact", async (req, res) => {
 
 });
 //Train Booking post API
-import BookTrain from './models/Booktrain.js'; 
+import BookTrain from './models/BookTrain.js'; 
 
 // POST endpoint for booking train tickets
 app.post("/book-train-ticket", async (req, res) => {
@@ -329,7 +329,7 @@ app.post("/book-train-ticket", async (req, res) => {
 })
 
 //Airplane Booking post API
-import Bookplane from "./models/Bookplane.js";
+import Bookplane from "./models/BookPlane.js";
 // POST endpoint for booking train tickets
 app.post("/book-plane-ticket", async (req, res) => {
   const { from, to, date } = req.body;
