@@ -32,13 +32,13 @@ export default function AContactUs() {
 
     return (
         <>
-            <div className="container">
-                <h1 className="mt-4 mb-3">AContactUs</h1>
+            <div className="container rounded ">
+                <h1 className=" mb-3">Contact Requests</h1>
                 <div className="row">
                     {contact.map((item, index) => {
                         const { _id, name, email } = item;
                         return (
-                            <div key={_id} className="col-lg-4 col-md-6 mb-4">
+                            <div key={_id} className="col-lg-4 col-md-6 mb-4 mt-4">
                                 <div className="card h-100" style={{ cursor: 'pointer' }} onClick={() => handleContactClick(index)} data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <div className="card-body">
                                         <h4 className="card-title">{name}</h4>
