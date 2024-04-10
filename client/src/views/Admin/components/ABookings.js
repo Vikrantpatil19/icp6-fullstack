@@ -29,7 +29,7 @@ export default function ABookings() {
     return (
         <div className="container pb-5">
             <h1>All Bookings</h1>
-            <table className="table">
+            <table className="table rounded mt-5">
                 <thead>
                     <tr>
                         <th scope="col">Email</th>
